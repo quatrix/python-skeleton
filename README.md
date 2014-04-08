@@ -8,17 +8,19 @@ Python Skeleton
 Usage
 -----
 
-1. clone this repo
+Clone this repo
 
 ```
-» git clone https://github.com/quatrix/python-skeleton.git
+git clone https://github.com/quatrix/python-skeleton.git
 ```
 
-2. ```create_project.sh``` takes a project name and creates it in the ```$CWD```
+```create_project.sh``` takes a project name and creates it in the ```$CWD```
 
 ```
-» python-skeleton/create_project.sh my_project
+python-skeleton/create_project.sh my_project
+```
 
+```
 Initialized empty Git repository in /Users/quatrix/projects/python/my_project/.git/
 [master (root-commit) 2b5c3b5] Started project my_project
  6 files changed, 34 insertions(+)
@@ -31,13 +33,16 @@ Initialized empty Git repository in /Users/quatrix/projects/python/my_project/.g
 »
 ```
 
-3. then ```cd``` into the project and run ````tox````
+Cd into the project and run tox
 
-it will build the virtualenv and run the single test that should fail
 
 ```
-» cd my_project 
-» tox 
+cd my_project && tox 
+```
+
+It will build the virtualenv and run the single test that should fail
+
+```
 GLOB sdist-make: /Users/quatrix/projects/python/my_project/setup.py
 py27 create: /Users/quatrix/projects/python/my_project/.tox/py27
 py27 installdeps: nose
@@ -64,4 +69,4 @@ __________________________________________________________________________ summa
 ERROR:   py27: commands failed
 ```
 
-4. you're now ready to code!
+You're now ready to code!
