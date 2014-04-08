@@ -27,6 +27,7 @@ cd $PROJECT_NAME
 mv NAME $PROJECT_NAME
 mv tests/test_NAME.py tests/test_$PROJECT_NAME.py
 perl -p -i -e "s/NAME/${PROJECT_NAME}/g; s/AUTHOR_EMAIL/${AUTHOR_EMAIL}/g; s/AUTHOR/${AUTHOR}/g" setup.py
+perl -p -i -e "s/NAME/${PROJECT_NAME}/g;" tests/test_$PROJECT_NAME.py
 
 git init .
 git add .
