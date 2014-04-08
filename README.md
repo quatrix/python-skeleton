@@ -30,7 +30,6 @@ Initialized empty Git repository in /Users/quatrix/projects/python/my_project/.g
  create mode 100644 setup.py
  create mode 100644 tests/test_my_project.py
  create mode 100644 tox.ini
-»
 ```
 
 Cd into the project and run tox
