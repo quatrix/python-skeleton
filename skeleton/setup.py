@@ -1,5 +1,3 @@
-from NAME import __version__
-
 try:
     from setuptools import setup
 except ImportError:
@@ -8,7 +6,7 @@ except ImportError:
 config = {
     'author': 'AUTHOR',
     'author_email': 'AUTHOR_EMAIL',
-    'version': __version__,
+    'version': "0.1.0",
     'install_requires': ['nose'],
     'packages': ['NAME'],
     'scripts': [],
