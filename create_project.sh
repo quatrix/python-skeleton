@@ -9,12 +9,18 @@ usage()
     exit 1
 }
 
-[ "$1" != "" ] || usage
+[ $# -eq 1 ] || usage
 
 PROJECT_NAME=$1
 AUTHOR=$(git config user.name)
 AUTHOR_EMAIL=$(git config user.email)
 REPO_DIR=$(dirname ${BASH_SOURCE[0]})
+
+if [ -e $PROJECT_NAME ]
+then
+    echo "$PROJECT_NAME already exists"
+    exit 1
+fi
 
 cp -r $REPO_DIR/skeleton $PROJECT_NAME
 cd $PROJECT_NAME
