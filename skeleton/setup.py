@@ -7,7 +7,7 @@ config = {
     'author': 'AUTHOR',
     'author_email': 'AUTHOR_EMAIL',
     'version': "0.1.0",
-    'install_requires': ['nose'],
+    'install_requires': [],
     'packages': ['NAME'],
     'scripts': [],
     'name': 'NAME'
