@@ -8,8 +8,15 @@ Python Skeleton
 Usage
 -----
 
+1. clone this repo
+
 ```
 » git clone https://github.com/quatrix/python-skeleton.git
+```
+
+2. ```create_project.sh``` takes a project name and creates it in the ```$CWD```
+
+```
 » python-skeleton/create_project.sh my_project
 
 Initialized empty Git repository in /Users/quatrix/projects/python/my_project/.git/
@@ -23,3 +30,38 @@ Initialized empty Git repository in /Users/quatrix/projects/python/my_project/.g
  create mode 100644 tox.ini
 »
 ```
+
+3. then ```cd``` into the project and run ````tox````
+
+it will build the virtualenv and run the single test that should fail
+
+```
+» cd my_project 
+» tox 
+GLOB sdist-make: /Users/quatrix/projects/python/my_project/setup.py
+py27 create: /Users/quatrix/projects/python/my_project/.tox/py27
+py27 installdeps: nose
+py27 inst: /Users/quatrix/projects/python/my_project/.tox/dist/my_project-0.1.0.zip
+py27 runtests: PYTHONHASHSEED='1663213220'
+py27 runtests: commands[0] | nosetests
+F
+======================================================================
+FAIL: test_my_project.test_my_project
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/quatrix/projects/python/my_project/.tox/py27/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/Users/quatrix/projects/python/my_project/tests/test_my_project.py", line 2, in test_my_project
+    assert False
+AssertionError
+
+----------------------------------------------------------------------
+Ran 1 test in 0.007s
+
+FAILED (failures=1)
+ERROR: InvocationError: '/Users/quatrix/projects/python/my_project/.tox/py27/bin/nosetests'
+__________________________________________________________________________ summary ___________________________________________________________________________
+ERROR:   py27: commands failed
+```
+
+4. you're now ready to code!
